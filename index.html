@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpack Project</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/jpeg;base64,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
+
+Bunyod Aka Fn4, [09.03.2023 8:02]
+wCzpMD4TpWuhGvRv2k71c80k07mmiCHf4qsKbWdWyyeaf8AVpL9yV0l0XdBLj4JVJJVjMwXkrYq8VdC1K+XEqsVc+lXPpKqaDZxgzymwVElfOksrT474766LyY3VWoyAkM6smMxGEMYgAYxABWcTfqtp59dxFCJ7ib9VtPPruIoRYgAAKA4zG37Hqc7S752ZxmNv2PU52l3xRCjGhwZcseyRkzGz8GXLHskZaZjEADGIAMkwMWykYLxb0pU4VK9ok9vGM9rCKiler7r3eS3Q0WLrBflFvjOSvp2X+rJ+7b/AKF05/sddjSt7p2KFFb9pqLbfwh6V3Tcb/BGD7FYaeSouFPbO97aac5vjbe+GHMDWS3U1Cvn2rvhOMrpRb4mc9+dta8IUM7zZFsCo2azVbRSrzlkY7baTSd+fevRwR0l2x6M92Bre7NaaVdf9U039Y+9dA8A4MdstNOzqSpupf6bV6SSv3ih2HFzY4XOvVnW443qEH0ZyWyLI7SjUU4xlHPGSUovjTV5m1x5/ofKlk4RjGLjGMEoxV+ZJZkjJVY6UelHJtE9leCnZLbVpXeg3t6L46cs6X2zr7GoLhhzANktyiq6vlC/aTjK6cb/AHX8RwWy/YZTsdDyijVlOKnGLpzSv9K/OmjpMmbHGgIZtDGYjCGMQAVrE16raefXcRQie4mvVLTz67iKEWIAACgOMxuex6nO0u+dmcZjc9j1Odpd8UQkxocGXLHskZGNDgy5Y9kjDTMYgAYxAUM9Lt9oaudaq0syWVlddyXnmAgyefO8743nZlCTjwW48juMBplH2la6zi4upUcXvxc24v7XnyEAR9KdSUXtoScJLelF3NfdGcrVVlwqlSXLNv8AyfECBvPv5+ULgAqvtTtNSPBnOPJNrsZnVtlacdrOrUnHf2sqjlG/kbPOMgYCGUMBDAYzEYRWsTPqlp59dxFDJ5iZ9UtPPruIoZYgAAKA4zG57Hqc7S752ZxmNz2PU52l3xRCWY0ODLlj2SGKhwZcseyRlWYCGRQMQAMYgKGMQAZJgIaYAMQBDGIAGMQBWQCGAwEMBgIYFbxM+qWnn13EUMnmJj1S08+u4ihljIAAKA5vGLg6dpwTaadNOVSMY1YRW/J05KTXLcmdIAH5VFQ4MuWPZIrOzTFlKdSdfBu1W3blOzSdy2z33B+7kOEjsKwvHbJ2Oq3es6uad1/1M6VowN5uOwt8lW6F4j3HYW+SrdC8QNGBvNx2Fvk63QvENx2Fvk63QvEmhoxm73HYW+TrdC8R7j8LfJ1uheJRoxm73H4W+TrdC8Q3H4W+TrdC8QNIM3e4/C3ydboXiG4/C3ydboXiBpUwN1uPwr8nW6F4j3IYV+TrdC8QNIM3e5DCvydboXiG5DCvydboXiBpBm63IYV+TrdC8Q3IYV+TrdC8QNKM3W5HCvydbVXiG5HCvydbVXiBpgN1uRwr8nW6F4huRwr8nW6F4gaYDdR2IYVb9TrfdLxOq2L4s605xqYQup0k08jF3zqfRtbyGh0uKXB8qWDXUmmnaasqkU/hpKKf3ab+6O2MKVOMIqMEoxilGMVmSS3kjM0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+    />
+  <script defer src="bundle.js"></script><script defer src="about.js"></script></head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a class="logo-link" href="./index.html">
+          <img class="header__logo" src="./images/logo.svg" alt="Shape" />
+        </a>
+
+        <!-- sitenav -->
+        <nav class="sitenav">
+          <ul class="sitenav__list">
+            <li class="sitenav__item">
+              <div class="dropdown">
+                <button class="sitenav__title dropbtn">
+                  <h3 class="sitenav__title">Sans Serif</h3>
+                  <img
+                    class="sitenav__strelka"
+                    src="./images/icon-arrow-down.svg"
+                    alt=""
+                  />
+                </button>
+                <div class="dropdown-content">
+                  <div id="sans-serif" class="dropdown-color">Sans Serif</div>
+                  <div id="serif" class="dropdown-color">Serif</div>
+                  <div id="mono" class="dropdown-color">Mono</div>
+                </div>
+              </div>
+            </li>
+            <li class="sitenav__item">
+              <img class="sitenav__border" src="./images/u.svg" alt="" />
+            </li>
+            <!--  -->
+            <li class="sitenav__item">
+              <div class="headerCheckbox">
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label for="checkbox" class="label">
+                  <div class="ball"></div>
+                </label>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                >
+                  <path
+                    class="sitenav__moon"
+                    fill="none"
+                    stroke="#838383"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"
+                  />
+                </svg>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container container">
+          <form id="form" class="hero__wrapper">
+            <input
+              id="input"
+              type="text"
+              class="hero__title"
+              placeholder="keyboard"
+              autocomplete="off"
+            />
+            <img src="./images/icon-search.svg" alt="search" />
+          </form>
+        </div>
+      </section>
+
+      <!--  -->
+
+      <section class="updateEl"></section>
+    </main>
+  </body>
+</html>
